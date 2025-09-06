@@ -50,6 +50,8 @@ jobs:
             HTML
           fi
           touch dist/.nojekyll
+          # SPA fallback for GitHub Pages
+          cp dist/index.html dist/404.html || true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
