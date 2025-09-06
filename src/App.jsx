@@ -1,5 +1,6 @@
 import React from 'react'
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import Navigation from './components/Navigation'
 import Portfolio from './Pages/Portfolio'
 import Skills from './Pages/Skills'
 import Experience from './Pages/Experience'
@@ -9,6 +10,7 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-slate-950">
+        <Navigation />
         <Routes>
           <Route path="/" element={<Portfolio />} />
           <Route path="/skills" element={<Skills />} />
