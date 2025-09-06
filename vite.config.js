@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
-  base: '/meena-kannan-fullstack/',
+  base: process.env.NODE_ENV === 'production' ? '/meena-kannan-fullstack/' : '/',
   plugins: [react()],
   resolve: {
     alias: {
